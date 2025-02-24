@@ -3,9 +3,9 @@ entries:
   postgres-dev:
   - apiVersion: v2
     appVersion: "15.3"
-    created: "2025-02-24T02:39:45.138508142Z"
+    created: "2025-02-24T02:41:16.755674474Z"
     description: A minimal Helm chart for deploying Postgres for local development.
-    digest: af6561525773b83997c33a813d341be70f158c779def816841655a4faec9bf3b
+    digest: 95246a7d11f0a0e73e6acd23daaab649a0dfd43a6f3c63edaf19be77aed2f383
     name: postgres-dev
     type: application
     urls:
@@ -14,12 +14,12 @@ entries:
   rabbitmq-dev:
   - apiVersion: v2
     appVersion: "4.0"
-    created: "2025-02-24T02:39:45.138665445Z"
+    created: "2025-02-24T02:41:16.755834984Z"
     description: A simplified RabbitMQ chart for local development
-    digest: 0fc4a196d635e0b623ee0cc218f0c0bf55aaa62e7aaf394af3b1bea30f3d84ba
+    digest: 051897c03cf05a725fe65b9f27ef7b76f84762eac0cdbf11d18e44ae64782835
     name: rabbitmq-dev
     type: application
     urls:
     - https://whale-net.github.io/dev-util/rabbitmq-dev-0.1.0.tgz
     version: 0.1.0
-generated: "2025-02-24T02:39:45.138210899Z"
+generated: "2025-02-24T02:41:16.755400491Z"

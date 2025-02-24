@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: rabbitmq-dev
+  namespace: {{ .Values.namespace }}
 spec:
   replicas: 1
   selector:
@@ -11,6 +12,7 @@ spec:
     metadata:
       labels:
         app: rabbitmq-dev
+      namespace: {{ .Values.namespace }}
     spec:
       containers:
         - name: rabbitmq
@@ -30,6 +32,7 @@ spec:
   volumeClaimTemplates:
     - metadata:
         name: rmq-data
+        namespace: {{ .Values.namespace }}
       spec:
         accessModes: [ "ReadWriteOnce" ]
         storageClassName: "{{ .Values.storageClassName }}"

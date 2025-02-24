@@ -5,4 +5,4 @@ postgresDB: mydb
 storageClassName: hostpath
 storageSize: 1Gi
 
-
+namespace: default

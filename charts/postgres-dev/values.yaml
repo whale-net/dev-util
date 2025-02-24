@@ -1,8 +1,0 @@
-image: postgres:15.3
-postgresUser: postgres
-postgresPassword: password
-postgresDB: mydb
-storageClassName: hostpath
-storageSize: 1Gi
-
-

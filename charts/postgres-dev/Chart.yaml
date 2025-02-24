@@ -1,8 +1,0 @@
-# Chart.yaml
-apiVersion: v2
-name: postgres-dev
-description: A minimal Helm chart for deploying Postgres for local development.
-type: application
-version: 0.1.0
-appVersion: "15.3" # Or your desired Postgres version
-

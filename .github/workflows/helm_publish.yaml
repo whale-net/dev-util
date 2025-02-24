@@ -1,29 +1,31 @@
-name: Release Helm Charts
+name: Publish Helm Chart to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main] # Or your main branch, adjust as needed
 
 jobs:
-  release:
-    # depending on default permission settings for your org (contents being read-only or read-write for workloads), you will have to add permissions
-    # see: https://docs.github.com/en/actions/security-guides/automatic-token-authentication#modifying-the-permissions-for-the-github_token
-    permissions:
-      contents: write
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Helm
+        uses: Azure/setup-helm@v3
         with:
-          fetch-depth: 0
+          version: 'latest' # Or specify a specific Helm version
 
-      - name: Configure Git
+      - name: Package Helm chart
+        run: helm package ./path/to/your/helm-chart # Replace ./path/to/your/helm-chart
+
+      - name: Generate Helm chart index
         run: |
-          git config user.name "$GITHUB_ACTOR"
-          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+          helm repo index . --url https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}
 
-      - name: Run chart-releaser
-        uses: helm/chart-releaser-action@v1.7.0
-        env:
-          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: . # Deploy the current directory (where index.yaml and chart.tgz are now)
+          clean: true # IMPORTANT: This will remove existing files in gh-pages to overwrite

@@ -17,7 +17,7 @@ jobs:
           version: 'latest' # Or specify a specific Helm version
 
       - name: Package Helm chart
-        run: helm package ./path/to/your/helm-chart # Replace ./path/to/your/helm-chart
+        run: helm package ./charts
 
       - name: Generate Helm chart index
         run: |

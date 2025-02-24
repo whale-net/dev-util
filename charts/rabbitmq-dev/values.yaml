@@ -6,3 +6,5 @@ image:
 
 storageClassName: hostpath
 storageSize: 1Gi
+rabbitmqUsername: rabbit
+rabbitmqPassword: password

@@ -1,5 +1,5 @@
 apiVersion: v2
-name: rabbitmq-dev
+name: rabbitmq-local
 description: A simplified RabbitMQ chart for local development
 type: application
 version: 0.1.0

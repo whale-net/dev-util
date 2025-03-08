@@ -1,0 +1,8 @@
+# Chart.yaml
+apiVersion: v2
+name: otelcollector-dev
+description: A minimal Helm chart for deploying OpenTelemetry Collector for local development.
+type: application
+version: 0.1.0
+appVersion: "latest" # Or your desired Postgres version
+

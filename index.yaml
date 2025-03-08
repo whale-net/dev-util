@@ -1,11 +1,23 @@
 apiVersion: v1
 entries:
+  otelcollector-dev:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2025-03-08T01:46:28.471443628Z"
+    description: A minimal Helm chart for deploying OpenTelemetry Collector for local
+      development.
+    digest: 7683624be7ef9375154190b5ff141f0d6ba95bb9cdcc1cc89026c73be8550964
+    name: otelcollector-dev
+    type: application
+    urls:
+    - https://whale-net.github.io/dev-util/otelcollector-dev-0.1.0.tgz
+    version: 0.1.0
   postgres-dev:
   - apiVersion: v2
     appVersion: "15.3"
-    created: "2025-02-24T21:58:48.171751804Z"
+    created: "2025-03-08T01:46:28.471602765Z"
     description: A minimal Helm chart for deploying Postgres for local development.
-    digest: 56babf919e95e5276ceef2e12ec04d068dd03efad08c1c508bb65deb4cebe70c
+    digest: 3e9e484154f129d16449d1d44e8344e2b70929c61e3bdf715272c01256d4110b
     name: postgres-dev
     type: application
     urls:
@@ -14,12 +26,12 @@ entries:
   rabbitmq-dev:
   - apiVersion: v2
     appVersion: "4.0"
-    created: "2025-02-24T21:58:48.171925816Z"
+    created: "2025-03-08T01:46:28.471764868Z"
     description: A simplified RabbitMQ chart for local development
-    digest: 3e07456118ea1024df6e94ce9032520dc4135df79241183319a23cba088d1259
+    digest: 3ac5b54fb7ef9295b343bc00127f894ad9f96f2b56b49480195516595fb4edb6
     name: rabbitmq-dev
     type: application
     urls:
     - https://whale-net.github.io/dev-util/rabbitmq-dev-0.1.0.tgz
     version: 0.1.0
-generated: "2025-02-24T21:58:48.171475492Z"
+generated: "2025-03-08T01:46:28.471153878Z"
